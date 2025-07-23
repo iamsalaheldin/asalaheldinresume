@@ -123,7 +123,7 @@ export default function ResumePage() {
       {/* Header Section */}
       <header className="relative overflow-hidden bg-gradient-to-br from-gray-900 via-black to-gray-800 border-b border-green-500/20">
         <div className="absolute inset-0 bg-grid-pattern opacity-20 animate-pulse-slow"></div>
-        <div className="relative container mx-auto px-6 py-16">
+        <div className="relative container mx-auto px-4 sm:px-6 py-12 sm:py-16">
           <div
             className={`text-center space-y-6 transition-all duration-1000 ${isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
@@ -132,38 +132,38 @@ export default function ResumePage() {
                 <img
                   src="/images/ahmed-profile.jpg"
                   alt="Ahmed Salah Eldin - Senior Software Testing Engineer"
-                  className="w-32 h-32 rounded-full object-cover animate-float"
+                  className="w-24 h-24 sm:w-32 sm:h-32 rounded-full object-cover animate-float"
                 />
               </div>
             </div>
             <div>
-              <h1 className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-green-400 via-cyan-400 to-green-400 bg-clip-text text-transparent mb-4 animate-typing">
+              <h1 className="text-3xl sm:text-5xl md:text-7xl font-bold bg-gradient-to-r from-green-400 via-cyan-400 to-green-400 bg-clip-text text-transparent mb-4 animate-typing leading-tight">
                 Ahmed Salah Eldin
               </h1>
-              <p className="text-xl md:text-2xl text-green-300 font-mono animate-fade-in-delayed">
+              <p className="text-lg sm:text-xl md:text-2xl text-green-300 font-mono animate-fade-in-delayed">
                 Senior Software Testing Engineer
               </p>
             </div>
-            <div className="flex flex-wrap justify-center gap-6 text-gray-300 animate-fade-in-delayed-2">
-              <div className="flex items-center gap-2 hover:text-green-400 transition-colors duration-300">
-                <MapPin className="w-4 h-4 text-green-400" />
-                <span>Nasr City, Cairo, Egypt</span>
+            <div className="flex flex-col sm:flex-row sm:flex-wrap justify-center gap-3 sm:gap-6 text-gray-300 animate-fade-in-delayed-2">
+              <div className="flex items-center justify-center gap-2 hover:text-green-400 transition-colors duration-300">
+                <MapPin className="w-4 h-4 text-green-400 flex-shrink-0" />
+                <span className="text-sm sm:text-base text-center">Nasr City, Cairo, Egypt</span>
               </div>
-              <div className="flex items-center gap-2 hover:text-green-400 transition-colors duration-300">
-                <Phone className="w-4 h-4 text-green-400" />
-                <span>01127682716</span>
+              <div className="flex items-center justify-center gap-2 hover:text-green-400 transition-colors duration-300">
+                <Phone className="w-4 h-4 text-green-400 flex-shrink-0" />
+                <span className="text-sm sm:text-base">01127682716</span>
               </div>
-              <div className="flex items-center gap-2 hover:text-green-400 transition-colors duration-300">
-                <Mail className="w-4 h-4 text-green-400" />
-                <span>ahmedsalahghobish@hotmail.com</span>
+              <div className="flex items-center justify-center gap-2 hover:text-green-400 transition-colors duration-300">
+                <Mail className="w-4 h-4 text-green-400 flex-shrink-0" />
+                <span className="text-sm sm:text-base break-all">ahmedsalahghobish@hotmail.com</span>
               </div>
-              <div className="flex items-center gap-2 hover:text-green-400 transition-colors duration-300">
-                <Linkedin className="w-4 h-4 text-green-400" />
+              <div className="flex items-center justify-center gap-2 hover:text-green-400 transition-colors duration-300">
+                <Linkedin className="w-4 h-4 text-green-400 flex-shrink-0" />
                 <a
                   href="https://www.linkedin.com/in/iamsalaheldin/"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="hover:underline"
+                  className="hover:underline text-sm sm:text-base break-all"
                 >
                   linkedin.com/in/iamsalaheldin
                 </a>
@@ -173,16 +173,16 @@ export default function ResumePage() {
         </div>
       </header>
 
-      <main className="container mx-auto px-6 py-12 space-y-16">
+      <main className="container mx-auto px-4 sm:px-6 py-8 sm:py-12 space-y-12 sm:space-y-16">
         {/* Objective Section */}
         <section className="text-center" data-animate id="objective">
           <Card
             className={`bg-gray-900/50 border-green-500/20 backdrop-blur-sm transition-all duration-700 hover:border-green-400/40 hover:shadow-lg hover:shadow-green-500/10 ${visibleSections.has("objective") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <CardHeader>
+            <CardHeader className="p-4 sm:p-6">
               <CardTitle className="text-2xl text-green-400 font-mono">OBJECTIVE</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="p-4 sm:p-6">
               <p className="text-lg text-gray-300 leading-relaxed">
                 Seeking a position in a company, where my technical and interpersonal skills can be demonstrated and
                 developed in software testing.
@@ -194,7 +194,7 @@ export default function ResumePage() {
         {/* Experience Section */}
         <section data-animate id="experience">
           <h2
-            className={`text-3xl font-bold text-green-400 mb-8 font-mono text-center transition-all duration-700 ${visibleSections.has("experience") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className={`text-2xl sm:text-3xl font-bold text-green-400 mb-6 sm:mb-8 font-mono text-center transition-all duration-700 ${visibleSections.has("experience") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
             EXPERIENCE
           </h2>
@@ -205,24 +205,29 @@ export default function ResumePage() {
                 className={`bg-gray-900/50 border-green-500/20 backdrop-blur-sm hover:border-green-400/40 transition-all duration-500 hover:shadow-lg hover:shadow-green-500/10 hover:scale-[1.02] ${visibleSections.has("experience") ? "opacity-100 translate-x-0" : "opacity-0 translate-x-10"}`}
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
-                <CardHeader>
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-                    <div>
-                      <CardTitle className="text-xl text-green-300">{exp.title}</CardTitle>
-                      <p className="text-cyan-400 font-semibold">{exp.company}</p>
-                      {exp.project && <p className="text-gray-400 text-sm mt-1">{exp.project}</p>}
+                <CardHeader className="p-4 sm:p-6">
+                  <div className="flex flex-col gap-3 sm:gap-4">
+                    <div className="space-y-2">
+                      <CardTitle className="text-lg sm:text-xl text-green-300 leading-tight">{exp.title}</CardTitle>
+                      <p className="text-cyan-400 font-semibold text-sm sm:text-base">{exp.company}</p>
+                      {exp.project && <p className="text-gray-400 text-xs sm:text-sm mt-1">{exp.project}</p>}
                     </div>
-                    <Badge variant="outline" className="border-green-500/50 text-green-400 font-mono">
-                      {exp.period}
-                    </Badge>
+                    <div className="flex justify-start">
+                      <Badge
+                        variant="outline"
+                        className="border-green-500/50 text-green-400 font-mono text-xs sm:text-sm px-2 py-1"
+                      >
+                        {exp.period}
+                      </Badge>
+                    </div>
                   </div>
                 </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
+                <CardContent className="p-4 sm:p-6 pt-0">
+                  <ul className="space-y-2 sm:space-y-3">
                     {exp.responsibilities.map((resp, idx) => (
-                      <li key={idx} className="flex items-start gap-3 text-gray-300">
+                      <li key={idx} className="flex items-start gap-2 sm:gap-3 text-gray-300">
                         <div className="w-2 h-2 bg-green-400 rounded-full mt-2 flex-shrink-0"></div>
-                        <span>{resp}</span>
+                        <span className="text-sm sm:text-base leading-relaxed">{resp}</span>
                       </li>
                     ))}
                   </ul>
@@ -235,14 +240,14 @@ export default function ResumePage() {
         {/* Education Section */}
         <section data-animate id="education">
           <h2
-            className={`text-3xl font-bold text-green-400 mb-8 font-mono text-center transition-all duration-700 ${visibleSections.has("education") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className={`text-2xl sm:text-3xl font-bold text-green-400 mb-6 sm:mb-8 font-mono text-center transition-all duration-700 ${visibleSections.has("education") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
             EDUCATION
           </h2>
           <Card
             className={`bg-gray-900/50 border-green-500/20 backdrop-blur-sm transition-all duration-700 hover:border-green-400/40 hover:shadow-lg hover:shadow-green-500/10 ${visibleSections.has("education") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <CardHeader>
+            <CardHeader className="p-4 sm:p-6">
               <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
                 <div>
                   <CardTitle className="text-xl text-green-300">B.Sc. in Computer Science</CardTitle>
@@ -253,7 +258,7 @@ export default function ResumePage() {
                 </Badge>
               </div>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent className="p-4 sm:p-6 space-y-4">
               <div>
                 <h4 className="text-green-300 font-semibold mb-2">Graduation Project: VEHICULAR TRAFFIC ANALYTICS</h4>
                 <p className="text-gray-300">
@@ -277,10 +282,10 @@ export default function ResumePage() {
           <Card
             className={`bg-gray-900/50 border-green-500/20 backdrop-blur-sm transition-all duration-700 hover:border-green-400/40 hover:shadow-lg hover:shadow-green-500/10 ${visibleSections.has("skills") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <CardHeader>
+            <CardHeader className="p-4 sm:p-6">
               <CardTitle className="text-2xl text-green-400 font-mono">PERSONAL SKILLS</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="p-4 sm:p-6">
               <ul className="space-y-3">
                 {personalSkills.map((skill, index) => (
                   <li key={index} className="flex items-start gap-3 text-gray-300">
@@ -296,10 +301,10 @@ export default function ResumePage() {
           <Card
             className={`bg-gray-900/50 border-green-500/20 backdrop-blur-sm transition-all duration-700 hover:border-green-400/40 hover:shadow-lg hover:shadow-green-500/10 ${visibleSections.has("skills") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <CardHeader>
+            <CardHeader className="p-4 sm:p-6">
               <CardTitle className="text-2xl text-green-400 font-mono">TECHNICAL SKILLS</CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="p-4 sm:p-6">
               <ul className="space-y-3">
                 {technicalSkills.map((skill, index) => (
                   <li key={index} className="flex items-start gap-3 text-gray-300">
@@ -315,20 +320,20 @@ export default function ResumePage() {
         {/* Tools & Technologies */}
         <section data-animate id="tools">
           <h2
-            className={`text-3xl font-bold text-green-400 mb-8 font-mono text-center transition-all duration-700 ${visibleSections.has("tools") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className={`text-2xl sm:text-3xl font-bold text-green-400 mb-6 sm:mb-8 font-mono text-center transition-all duration-700 ${visibleSections.has("tools") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
             TOOLS & TECHNOLOGIES
           </h2>
           <Card className="bg-gray-900/50 border-green-500/20 backdrop-blur-sm">
-            <CardContent className="pt-6">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            <CardContent className="p-4 sm:p-6 pt-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4">
                 {tools.map((tool, index) => (
                   <div
                     key={index}
-                    className={`p-3 bg-green-500/10 border border-green-500/20 rounded-lg text-center hover:bg-green-500/20 transition-all duration-300 hover:scale-105 hover:shadow-md hover:shadow-green-500/20 cursor-pointer ${visibleSections.has("tools") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
+                    className={`p-3 sm:p-4 bg-green-500/10 border border-green-500/20 rounded-lg text-center hover:bg-green-500/20 transition-all duration-300 hover:scale-105 hover:shadow-md hover:shadow-green-500/20 cursor-pointer ${visibleSections.has("tools") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"}`}
                     style={{ transitionDelay: `${index * 50}ms` }}
                   >
-                    <span className="text-green-300 font-medium">{tool}</span>
+                    <span className="text-green-300 font-medium text-sm sm:text-base">{tool}</span>
                   </div>
                 ))}
               </div>
@@ -339,14 +344,14 @@ export default function ResumePage() {
         {/* Certificates */}
         <section data-animate id="certificates">
           <h2
-            className={`text-3xl font-bold text-green-400 mb-8 font-mono text-center transition-all duration-700 ${visibleSections.has("certificates") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            className={`text-2xl sm:text-3xl font-bold text-green-400 mb-6 sm:mb-8 font-mono text-center transition-all duration-700 ${visibleSections.has("certificates") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
             CERTIFICATES & COURSES
           </h2>
           <Card
             className={`bg-gray-900/50 border-green-500/20 backdrop-blur-sm transition-all duration-700 hover:border-green-400/40 hover:shadow-lg hover:shadow-green-500/10 ${visibleSections.has("certificates") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <CardContent className="pt-6">
+            <CardContent className="p-4 sm:p-6 pt-6">
               <ul className="space-y-4">
                 {certificates.map((cert, index) => (
                   <li key={index} className="flex items-start gap-3 text-gray-300">
@@ -365,13 +370,13 @@ export default function ResumePage() {
           <Card
             className={`bg-gray-900/50 border-green-500/20 backdrop-blur-sm transition-all duration-700 hover:border-green-400/40 hover:shadow-lg hover:shadow-green-500/10 ${visibleSections.has("additional-info") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <CardHeader>
+            <CardHeader className="p-4 sm:p-6">
               <CardTitle className="text-2xl text-green-400 font-mono flex items-center gap-2">
                 <Globe className="w-6 h-6" />
                 LANGUAGES
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="p-4 sm:p-6">
               <div className="space-y-3">
                 <div className="flex justify-between items-center">
                   <span className="text-gray-300">Arabic</span>
@@ -389,13 +394,13 @@ export default function ResumePage() {
           <Card
             className={`bg-gray-900/50 border-green-500/20 backdrop-blur-sm transition-all duration-700 hover:border-green-400/40 hover:shadow-lg hover:shadow-green-500/10 ${visibleSections.has("additional-info") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
           >
-            <CardHeader>
+            <CardHeader className="p-4 sm:p-6">
               <CardTitle className="text-2xl text-green-400 font-mono flex items-center gap-2">
                 <User className="w-6 h-6" />
                 PERSONAL INFO
               </CardTitle>
             </CardHeader>
-            <CardContent>
+            <CardContent className="p-4 sm:p-6">
               <div className="space-y-3 text-gray-300">
                 <div className="flex items-center gap-3">
                   <Calendar className="w-4 h-4 text-green-400" />
@@ -421,8 +426,8 @@ export default function ResumePage() {
 
       {/* Footer */}
       <footer className="border-t border-green-500/20 bg-gray-900/50 backdrop-blur-sm">
-        <div className="container mx-auto px-6 py-8 text-center">
-          <p className="text-gray-400 font-mono">
+        <div className="container mx-auto px-4 sm:px-6 py-6 sm:py-8 text-center">
+          <p className="text-gray-400 font-mono text-sm sm:text-base">
             © 2024 Ahmed Salah Eldin. Crafted with precision and passion for quality.
           </p>
         </div>
