@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Mail, Phone, MapPin, Calendar, User, Globe, Heart } from "lucide-react"
+import { Mail, Phone, MapPin, Calendar, User, Globe, Heart, Linkedin } from "lucide-react"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
@@ -156,6 +156,17 @@ export default function ResumePage() {
               <div className="flex items-center gap-2 hover:text-green-400 transition-colors duration-300">
                 <Mail className="w-4 h-4 text-green-400" />
                 <span>ahmedsalahghobish@hotmail.com</span>
+              </div>
+              <div className="flex items-center gap-2 hover:text-green-400 transition-colors duration-300">
+                <Linkedin className="w-4 h-4 text-green-400" />
+                <a
+                  href="https://www.linkedin.com/in/iamsalaheldin/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline"
+                >
+                  linkedin.com/in/iamsalaheldin
+                </a>
               </div>
             </div>
           </div>
